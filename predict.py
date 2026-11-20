@@ -1,3 +1,9 @@
+THRESHOLD = 0.5
+
+
 def predict(scores):
-    """Nhan có di?m cao nh?t trong dict {nhan: di?m}."""
-    return max(scores, key=scores.get)
+    """Nhãn có điểm cao nhất trong dict {nhãn: điểm}."""
+    best_label = max(scores, key=scores.get)
+    if scores[best_label] < THRESHOLD:
+        return "unknown"
+    return best_label
