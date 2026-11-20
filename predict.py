@@ -1,3 +1,6 @@
+THRESHOLD = 0.5
+
+
 def predict(scores):
-    """Nhan có di?m cao nh?t trong dict {nhan: di?m}."""
+    """Nhãn có điểm cao nhất trong dict {nhãn: điểm}."""
     return max(scores, key=scores.get)
